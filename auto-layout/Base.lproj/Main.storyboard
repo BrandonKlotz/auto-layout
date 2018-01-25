@@ -1,34 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="auto_layout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Gm-gi-gvr">
-                                <rect key="frame" x="67" y="249" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="8Gm-gi-gvr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3T-qU-LXv">
+                                <rect key="frame" x="0.0" y="515.33333333333337" width="414" height="220.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mountain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhZ-09-MO6">
+                                        <rect key="frame" x="30" y="20.333333333333258" width="364" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Slopes Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWL-Vy-6Pl">
+                                        <rect key="frame" x="30" y="66.333333333333258" width="364" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.099776785714285721" alpha="0.79580215669014087" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="fWL-Vy-6Pl" firstAttribute="leading" secondItem="Y3T-qU-LXv" secondAttribute="leading" constant="30" id="3Rj-jG-it1"/>
+                                    <constraint firstItem="XhZ-09-MO6" firstAttribute="top" secondItem="Y3T-qU-LXv" secondAttribute="top" constant="20" id="QBs-4h-03X"/>
+                                    <constraint firstItem="fWL-Vy-6Pl" firstAttribute="top" secondItem="XhZ-09-MO6" secondAttribute="bottom" constant="10" id="V7K-88-mL3"/>
+                                    <constraint firstItem="XhZ-09-MO6" firstAttribute="leading" secondItem="Y3T-qU-LXv" secondAttribute="leading" constant="30" id="Wuz-IM-rlh"/>
+                                    <constraint firstAttribute="trailing" secondItem="fWL-Vy-6Pl" secondAttribute="trailing" constant="20" id="ZOt-1Y-lmQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="XhZ-09-MO6" secondAttribute="trailing" constant="20" id="vkd-o7-6Om"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8Gm-gi-gvr" secondAttribute="trailing" id="42x-AG-FDQ"/>
+                            <constraint firstItem="Y3T-qU-LXv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="9wP-gV-TNB"/>
+                            <constraint firstItem="Y3T-qU-LXv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NVr-Sw-ZLL"/>
+                            <constraint firstItem="8Gm-gi-gvr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gaQ-AH-a1A"/>
+                            <constraint firstAttribute="trailing" secondItem="Y3T-qU-LXv" secondAttribute="trailing" id="i2Y-rf-gYf"/>
+                            <constraint firstAttribute="bottom" secondItem="8Gm-gi-gvr" secondAttribute="bottom" id="nYr-I9-ctV"/>
+                            <constraint firstAttribute="bottom" secondItem="Y3T-qU-LXv" secondAttribute="bottom" id="xEj-c6-nt7"/>
+                            <constraint firstItem="8Gm-gi-gvr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zfQ-Ff-njg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="landscape" width="4928" height="3264"/>
+    </resources>
 </document>
